@@ -1,31 +1,10 @@
-<!doctype html>
 <html>
 <head>
 
-<script type="text/javascript">
-//---------------------------------------------------------------------
-// QRCode for JavaScript
-//
-// Copyright (c) 2009 Kazuhiko Arase
-//
-// URL: http://www.d-project.com/
-//
-// Licensed under the MIT license:
-//   http://www.opensource.org/licenses/mit-license.php
-//
-// The word "QR Code" is registered trademark of 
-// DENSO WAVE INCORPORATED
-//   http://www.denso-wave.com/qrcode/faqpatent-e.html
-//
-//---------------------------------------------------------------------
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 
-<script type="text/javascript" src="jquery.qrcode.min.js">
-
-btcAddress = 1MSFaLhKeznBUwPgzgSeTHXTqAcGk3HTfz;
- $("btcAddress").text = btcAddress;
-jquery('#qrcode').qrcode(btcAddress);
-</script>
-
+<script type="text/javascript" src="../src/jquery.qrcode.js"></script>
+<script type="text/javascript" src="../src/qrcode.js"></script>
 
 
 </head>
@@ -33,9 +12,18 @@ jquery('#qrcode').qrcode(btcAddress);
 <body>
 
 
-<div id="btcAddress"></div>
+<div id="btcAddress">
+	<span id="btcAddressSpan"> </span>
+</div>
 <div id="qrcode"></div>
 
+<script>
+	//jQuery('#qrcode').qrcode("this plugin is great");
+	jQuery('#qrcode').qrcode({
+		render	: "table",
+		text	: "http://jetienne.com"
+	});		
+</script>
 
 </body>
 </html>
