@@ -1,28 +1,43 @@
 <html>
 <head>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-
-<script type="text/javascript" src="../src/jquery.qrcode.js"></script>
-<script type="text/javascript" src="../src/qrcode.js"></script>
-
-
+<title>basic example</title>
+<link rel="stylesheet" href="/styles/main.css"/>
 </head>
-
 <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.qrcode.js"></script>
+<script type="text/javascript" src="/js/qrcode.js"></script>
 
 
-<div id="btcAddress">
-	<span id="btcAddressSpan"> </span>
+<div id="container-qrcode">
+	<p>Send Bitcion and Secrets To:</p>
+	<div id="qrcodeCanvas"></div>
 </div>
-<div id="qrcode"></div>
+
+<div id
+<div class="before-submission-main-footer">
+    <form  id="mc-embedded-secret-form" name="mc-embedded-secret-form" class="validate" novalidate>
+       	<div class="field">
+            <input type="text" name="SECRET" id="secret-footer" placeholder="The Secret">
+             <button type="submit" onclick="checkTxSendSecret(); return false;" class="btn btn-primary small">Send Secret</button>
+        </div>
+    </form>
+ </div>
+ <div id ="after-submission-msg-div" class="after-submission-main-footer">
+    <p> Secret Will Send Once You Determine How Much the Secret Is Worth and Send It to the Address Above.</p>
+ </div>
+
 
 <script>
-	//jQuery('#qrcode').qrcode("this plugin is great");
-	jQuery('#qrcode').qrcode({
-		render	: "table",
-		text	: "http://jetienne.com"
-	});		
+	jQuery('#qrcodeCanvas').qrcode({
+		text	: "1JNTmKNxhWozTcBPA52yuRyrh7RKTAkLrf" //public address for this transaction
+	});
+
+	function checkTxSendSecret() {
+    var msgDiv = document.getElementById("after-submission-msg-div");
+    msgDiv.style.display = "inline";
+
+	}
 </script>
 
 </body>
