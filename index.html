@@ -8,25 +8,31 @@
 <script type="text/javascript" src="/js/jquery.qrcode.js"></script>
 <script type="text/javascript" src="/js/qrcode.js"></script>
 
+<br><br>
+<div align="center">
+<h2><font color="gray">SECRET BITS</font></h2>
+<p><font color="gray"> Because secrets should last forever.</font></p>
 
-<div id="container-qrcode">
-	<p>Send Bitcion and Secrets To:</p>
-	<div id="qrcodeCanvas"></div>
-</div>
 
 <div id
 <div class="before-submission-main-footer">
     <form  id="mc-embedded-secret-form" name="mc-embedded-secret-form" class="validate" novalidate>
        	<div class="field">
-            <input type="text" name="SECRET" id="secret-footer" placeholder="The Secret">
+            <input type="text" name="SECRET" id="secret-footer" placeholder="Your  Secret">
              <button type="submit" onclick="checkTxSendSecret(); return false;" class="btn btn-primary small">Send Secret</button>
         </div>
     </form>
  </div>
- <div id ="after-submission-msg-div" class="after-submission-main-footer">
-    <p> Secret Will Send Once You Determine How Much the Secret Is Worth and Send It to the Address Above.</p>
- </div>
+ <div><p><font color="gray"> Put your secrets on the blockchain. <br>Minimum fee: 0.001 btc </font></div>
+ 
 
+ <div id="container-qrcode">
+    <div id="qrcodeCanvas"></div>
+</div>
+ <div id ="after-submission-msg-div" class="after-submission-main-footer">
+    <p><font color="gray"></font></p>
+ </div>
+</div>
 
 <script>
 	jQuery('#qrcodeCanvas').qrcode({
